@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  customerInformationService:
+    image: tahatlal/customer-information-service:latest
+    build:
+        context: ./customerInformationService
+        dockerfile: Dockerfile
+    container_name: customerInformationService
+  callSmsService:
+    image: tahatlal/call-sms-service:latest
+    build:
+        context: ./call-sms-realtime-service
+        dockerfile: Dockerfile
+    container_name: callSmsService
+  orderService:
+    image: tahatlal/order-service:latest
+    build:
+        context: ./OrderService
+        dockerfile: Dockerfile
+    container_name: OrderService
+
+  webFluxRealTimeChatService:
+    image: tahatlal/web-flux-realtime-chat-service:latest
+    build:
+        context: ./webflux-realtime-chat
+        dockerfile: Dockerfile
+    container_name: webFluxRealTimeChatService
+

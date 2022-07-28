@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    mongodb:
+      database: customer-info-service-db
+      username: root
+      password: password
+      port: 27017
+      host: localhost:27017
+

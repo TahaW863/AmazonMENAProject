@@ -1,0 +1,4 @@
+twilio:
+  account_sid: AC747232f6f516f99595e8772877ace6c4
+  auth_token: ####d09eceff887d23fdcf6caf###e7d4
+  twilio_number: +17435003559

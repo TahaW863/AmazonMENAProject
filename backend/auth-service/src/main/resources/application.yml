@@ -1,0 +1,8 @@
+
+jwt:
+  secret: asdasdsadadsasdasdasxjcjhu%^@%#&%#@^&#^*@#^#SIDHSIUHDADSA5165454
+  expiration: 3600000
+  issuer: com.taha.master
+
+server:
+  port: 8084

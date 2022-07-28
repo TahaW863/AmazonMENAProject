@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    mongodb:
+      database: order-service-db
+      username: root
+      password: password
+      port: 27017
+      host: mongodb-db-customer-order-service:27017

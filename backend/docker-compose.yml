@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+  customerInformationService:
+    image: tahatlal/customer-information-service:latest
+    container_name: customerInformationService
+    restart: on-failure
+    depends_on:
+      - mongodb-db-customer-order-service
+    ports:
+      - "8080:8080"
+  callSmsService:
+    image: tahatlal/call-sms-service:latest
+    container_name: callSmsService
+    restart: on-failure
+    depends_on:
+      - customerInformationService
+    ports:
+      - "8081:8080"
+  orderService:
+    image: tahatlal/order-service:latest
+    container_name: OrderService
+    restart: on-failure
+    depends_on:
+      - mongodb-db-customer-order-service
+    ports:
+      - "8082:8080"
+  webFluxRealTimeChatService:
+    image: tahatlal/web-flux-realtime-chat-service:latest
+    container_name: webFluxRealTimeChatService
+    restart: on-failure
+    depends_on:
+      - mongodb-db-customer-order-service
+    ports:
+      - "8083:8080"
+
+
+  mongodb-db-customer-order-service:
+    image: mongo:latest
+    container_name: mongodb-db-customer-order-service
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - database-data-customer-order-service:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+
+volumes:
+  database-data-customer-order-service:
+  database-data-chat-flux-service:
+

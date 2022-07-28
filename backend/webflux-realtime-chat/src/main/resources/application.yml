@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    mongodb:
+      database: webflux-chat-service-db
+      username: root
+      password: password
+      port: 27017
+      host: mongodb-db-customer-order-service:27017
+  kafka:
+      bootstrap-servers: localhost:9092
+

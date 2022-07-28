@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auth-service" />
+        <module name="call-sms-realtime-service" />
+        <module name="customerInformationService" />
+        <module name="Auth" />
+        <module name="webflux-realtime-chat" />
+        <module name="kafka-producer-truckposition-service" />
+        <module name="OrderService" />
+        <module name="Notifications" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-service" target="17" />
+      <module name="CustomerChat" target="17" />
+      <module name="kafka-consumer-opensearch" target="17" />
+      <module name="kafka-producer-wikimedia" target="17" />
+      <module name="kafkaSystem" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Auth" options="" />
+      <module name="CustomerChat" options="" />
+      <module name="OrderService" options="" />
+      <module name="auth-service" options="-parameters" />
+      <module name="call-sms-realtime-service" options="" />
+      <module name="customerInformationService" options="" />
+      <module name="kafka-producer-truckposition-service" options="" />
+      <module name="kafkaSystem" options="" />
+    </option>
+  </component>
+</project>
